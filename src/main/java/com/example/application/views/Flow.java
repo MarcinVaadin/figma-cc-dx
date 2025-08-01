@@ -47,8 +47,6 @@ public class Flow extends Main {
 
         verticalLayout.add(horizontalLayout);
 
-        verticalLayout.add(new H2("Paste your Figma components below"));
-
         add(verticalLayout);
     }
 }

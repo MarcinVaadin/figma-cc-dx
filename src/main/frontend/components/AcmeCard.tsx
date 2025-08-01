@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
 
 interface AcmeCardProps {
-  title: string
-  subtitle?: string
-  description: string
+  title: string;
+  subtitle?: string;
+  description: string;
+  children?: React.ReactNode;
 }
 
-const AcmeCard: React.FC<AcmeCardProps> = ({ title, subtitle, description }) => {
+export const AcmeCard: React.FC<AcmeCardProps> = ({ title, subtitle, description, children }) => {
 
   const cardStyle: React.CSSProperties = {
     borderRadius: "16px",
@@ -34,13 +35,16 @@ const AcmeCard: React.FC<AcmeCardProps> = ({ title, subtitle, description }) => 
     marginTop: "12px",
   };
 
+  const childrenStyle: React.CSSProperties = {
+    marginTop: "16px",
+  };
+
   return (
     <div style={cardStyle}>
       <h2 style={titleStyle}>{title}</h2>
-      <h3 style={subtitleStyle}>{subtitle}</h3>
+      {subtitle && <h3 style={subtitleStyle}>{subtitle}</h3>}
       <p style={descriptionStyle}>{description}</p>
+      {children && <div style={childrenStyle}>{children}</div>}
     </div>
   )
-}
-
-export default AcmeCard
+};

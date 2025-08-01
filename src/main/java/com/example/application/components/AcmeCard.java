@@ -5,6 +5,10 @@ import com.vaadin.flow.component.card.Card;
 
 import java.util.Collection;
 
+/**
+ * For simplification Vaadin Card is used
+ * as a base for AcmeCard custom component.
+ */
 public class AcmeCard extends Card {
 
     @Override
