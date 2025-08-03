@@ -13,3 +13,8 @@ const outlet = document.getElementById('outlet')!;
 let root = (outlet as any)._root ?? createRoot(outlet);
 (outlet as any)._root = root;
 root.render(createElement(App));
+
+// @ts-ignore
+if (import.meta.env.DEV) {
+  import('./figma-importer');
+}
