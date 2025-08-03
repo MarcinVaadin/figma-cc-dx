@@ -21,13 +21,11 @@ public class AcmeCard extends Card {
         return super.getTitle();
     }
 
-    @Override
-    public void setSubtitle(Component subtitle) {
+    public void setDescription(Component subtitle) {
         super.setSubtitle(subtitle);
     }
 
-    @Override
-    public Component getSubtitle() {
+    public Component getDescription() {
         return super.getSubtitle();
     }
 
