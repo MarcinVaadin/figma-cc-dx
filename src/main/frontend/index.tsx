@@ -4,9 +4,7 @@ import { RouterProvider } from 'react-router';
 import { router } from 'Frontend/generated/routes.js';
 
 function App() {
-  return (
-      <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 
 const outlet = document.getElementById('outlet')!;
@@ -16,5 +14,8 @@ root.render(createElement(App));
 
 // @ts-ignore
 if (import.meta.env.DEV) {
-  import('./figma-importer');
+  import('./sdscard-java-importer');
+  import('./sdsbutton-java-importer');
+  import('./sdscard-react-importer');
+  import('./sdsbutton-react-importer');
 }
