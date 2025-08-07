@@ -2,15 +2,6 @@ import '@vaadin/icons';
 import React from 'react';
 import { Icon } from '@vaadin/react-components/Icon.js';
 
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace JSX {
-    interface IntrinsicElements {
-      'sds-card': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
-    }
-  }
-}
-
 interface SDSCardProps {
   title: string;
   children?: React.ReactNode;

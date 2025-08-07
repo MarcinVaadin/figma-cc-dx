@@ -1,16 +1,17 @@
 package com.example.application.components;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
-import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.dom.Style;
 
 /**
  * Simple Design System Card (simplified) In real project component library would be provided as project dependency
  */
+@Tag("sds-card")
 public class SDSCard extends Component {
 
     private Span title = new Span();
@@ -22,7 +23,6 @@ public class SDSCard extends Component {
     private Icon icon = VaadinIcon.INFO_CIRCLE_O.create();
 
     public SDSCard() {
-        super(new Element("sds-card"));
         getElement().appendChild(icon.getElement());
         getElement().appendChild(title.getElement());
         getElement().appendChild(bodyWrapper.getElement());
